@@ -1,0 +1,46 @@
+<ion-view ng-controller="welcomeCtrl">
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="background-welcome">
+  <div class="salesBoardBG"></div>
+   <div class ="item item-dark salesBoard">
+        <h3 class ="align-center stable">Current Sales LeaderBoard</h3>
+        
+    <div class="row header">
+          <div class="col" >Rank</div>
+          <div class="col" >Friend Name</div>
+          <div class="col" >Total Points</div>
+        </div>
+        <div class="row" ng-repeat="data1 in data">
+          <div class="col">{{data1.rank}}</div>
+          <div class="col">{{data1.friendName}}</div>
+          <div class="col">{{data1.totalPoints}}</div>
+    </div>
+        </div>
+
+<div class ="upcomingsalesBG" ></div>
+<div class="item item-dark upcomingsales">
+Upcoming Sales Events<br>
+<p></p>
+        From Mar 2016 to Dec 2016,every 10<br>
+         successful 
+        referrals will give you 2X<br>
+         MORE
+         REWARD POINTS!
+        <button class="button button-positive joinEvent" ng-click ="joinEvent()">
+  Join Event Now!
+</button>
+    </div>
+    
+<div class="progressbarBG"></div>
+<div class=" item item-dark progressbar ">
+3,614 points to get 2 Golden village<br>
+passes..
+<progress max="100" value="40"> </progress>
+</div>
+  </ion-content>
+</ion-view>

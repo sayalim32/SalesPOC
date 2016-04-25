@@ -1,0 +1,235 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+$royal:                           #004A87 !default;
+$positive:                        #0070BA !default;
+$dark:                            #333333 !default;
+$assertive:                       #0058A2 !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+
+.larger {
+    font-size: 25px;
+    
+}
+
+p.test{
+width:200px;
+	word-wrap: break-word;
+}
+
+.loginDiv {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;        
+    width:200px;
+    height:50px;
+    margin-left: -100px; /*half width*/
+    margin-top: -10px; /*half height*/
+}
+
+.applycardDiv {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;        
+    width:200px;
+    height:50px;
+    margin-left: -100px; /*half width*/
+    margin-top: -100px; /*half height*/
+}
+
+.joinEvent {
+	left:10%;
+    top: 70%;
+    position: absolute;
+    text-align: center;        
+    width:250px;
+    height:20px;
+	
+}
+
+.findteambutton {
+	left:15%;
+    top: 84%;
+    position: absolute;
+    text-align: center;        
+    width:250px;
+    height:15px;
+
+}
+
+.jointeamdiv{
+ 	width:500px;
+    height:200px;
+	background: url(../img/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+}
+
+.salesBoard{
+position: absolute;
+	left: 10%;
+    top: 25%;
+ 	width:300px;
+    height:180px;
+}
+
+.salesBoardBG{
+position: absolute;
+	left: 10%;
+    top: 25%;
+ 	width:300px;
+    height:180px;
+	opacity: 0.4; 
+}
+
+.upcomingsales{
+position: absolute;
+	left: 10%;
+    top: 60%;
+ 	width:300px;
+    height:180px;
+}
+
+.upcomingsalesBG{
+position: absolute;
+	left: 10%;
+    top: 60%;
+ 	width:300px;
+    height:180px;
+	opacity: 0.4; 
+}
+
+.progressbar{
+position: absolute;
+	left: 10%;
+    top: 95%;
+ 	width:300px;
+    height:120px;
+}
+
+.progressbarBG{
+position: absolute;
+	left: 10%;
+    top: 95%;
+ 	width:300px;
+    height:120px;
+	opacity: 0.4; 
+}
+
+
+.background-welcome {
+    background: url(../img/cremebackground.jpg) no-repeat center center fixed; 
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+}
+
+
+.header .col {
+  background-color:dark;
+}
+
+
+.header1 {
+    height: 40px;
+    border-bottom: 1px solid #EEE;
+    background-color: #ffffff;
+    height: 40px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.badgesdiv{
+	width: 400px;
+height: 290px;
+}
+
+.col1 {
+left: 7%;
+top :20%;
+position: absolute;
+text-align: center;
+width: 80px;
+height: 80px;
+}
+
+.col2 {
+left: 35%;
+top :20%;
+position: absolute;
+text-align: center;
+width: 80px;
+height: 80px;
+}
+
+.col3 {
+left: 63%;
+top :20%;
+position: absolute;
+text-align: center;
+width: 80px;
+height: 80px;
+}
+
+.col4 {
+left: 7%;
+top :55%;
+position: absolute;
+text-align: center;
+width: 80px;
+height: 80px;
+}
+
+.col5 {
+left: 35%;
+top :55%;
+position: absolute;
+text-align: center;
+width: 80px;
+height: 80px;
+}
+
+.col6 {
+left: 63%;
+top :55%;
+position: absolute;
+text-align: center;
+width: 80px;
+height: 80px;
+}
+
+
+
+.mainbody {
+    margin-top: 0;
+    min-height: 150px;
+    max-height: 388px;
+    overflow: auto;
+}

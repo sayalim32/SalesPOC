@@ -1,0 +1,50 @@
+<ion-view view-title="Find a team" ng-controller="findTeamCtrl">
+  <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      
+      </ion-nav-buttons>
+
+  <ion-content >
+  <div>
+   <a class="item item-icon-right" href="#">
+      <input type="text" placeholder="Search For Team">
+      <button class="button button-clear button-positive icon">
+            <i class="ion-ios-search-strong"></i>
+          </button>
+      </a>
+   </div>
+  <div class="list">
+
+    <a class="item item-avatar" href="#">
+      <img src="venkman.jpg">
+      <h2>Team Sophia Lee</h2>
+      <p>3,200 Team Members(359 Online)</p>
+      <p>Total Sales : $187,900.00</p>
+       <button class="button button-positive" ng-click ="joinTeam()">Join the Team</button>
+    </a>
+ <a class="item item-avatar" href="#">
+      <img src="venkman.jpg">
+      <h2>Team Lee Lee Chin</h2>
+      <p>2,890 Team Members(255 Online)</p>
+      <p>Total Sales : $112,500.00</p>
+       <button class="button button-positive" ng-click ="joinTeam()">Join the Team</button>
+    </a>
+     <a class="item item-avatar" href="#">
+      <img src="venkman.jpg">
+      <h2>Team Joshua Cheong</h2>
+      <p>1,560 Team Members(175 Online)</p>
+      <p>Total Sales : $87,100.00</p>
+       <button class="button button-positive" ng-click ="joinTeam()">Join the Team</button>
+    </a>
+     <a class="item item-avatar" href="#">
+      <img src="venkman.jpg">
+      <h2>Team James Ho</h2>
+      <p>366 Team Members(85 Online)</p>
+      <p>Total Sales : $47,900.00</p>
+       <button class="button button-positive" ng-click ="joinTeam()">Join the Team</button>
+    </a>
+</div>
+
+  </ion-content>
+</ion-view>
