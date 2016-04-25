@@ -22,6 +22,7 @@ $royal:                           #004A87 !default;
 $positive:                        #0070BA !default;
 $dark:                            #333333 !default;
 $assertive:                       #0058A2 !default;
+$calm:                            #4D4D4D !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
@@ -32,12 +33,18 @@ $assertive:                       #0058A2 !default;
     
 }
 
+.smaller {
+    font-size: 10px;
+    
+}
+
 p.test{
 width:200px;
 	word-wrap: break-word;
 }
 
 .loginDiv {
+
     position: absolute;
     left: 50%;
     top: 50%;
@@ -75,17 +82,43 @@ width:200px;
     position: absolute;
     text-align: center;        
     width:250px;
-    height:15px;
+    height:5px;
 
 }
 
+.findteamtextbox {
+	 width:270px;
+    height:5px;
+}
+
+.findteamsbutton{
+
+ line-height: 50px !important;
+ min-height: 10px !important;
+}
+
 .jointeamdiv{
- 	width:500px;
+top: 25%;
+ width:500px;
     height:200px;
-	background: url(../img/background.jpg) no-repeat center center fixed; 
-    -webkit-background-size: 100%;
+	background: url(../img/Sales-Event-Background.jpg) no-repeat center center fixed; 
+   	 -webkit-background-size: 100%;
     -moz-background-size: 100%;
     background-size: 100%;
+}
+
+.jointeamBG{
+
+	background: url(../img/SalesBG.png) no-repeat top center fixed; 
+   	 -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+}
+
+.jointeamButton{
+
+    width:240px;
+    height:5px;
 }
 
 .salesBoard{
@@ -107,9 +140,9 @@ position: absolute;
 
 .upcomingsales{
 position: absolute;
-	left: 10%;
+	left: 6%;
     top: 60%;
- 	width:300px;
+ 	width:316px;
     height:180px;
 }
 
@@ -124,10 +157,10 @@ position: absolute;
 
 .progressbar{
 position: absolute;
-	left: 10%;
-    top: 95%;
- 	width:300px;
-    height:120px;
+	left: 6%;
+    top: 92%;
+ 	width:316px;
+    height:80px;
 }
 
 .progressbarBG{
@@ -139,14 +172,45 @@ position: absolute;
 	opacity: 0.4; 
 }
 
+.otptextbox {
+left: 20%;
+width:270px;
+height:5px;
+}
 
-.background-welcome {
-    background: url(../img/cremebackground.jpg) no-repeat center center fixed; 
+.background-home {
+    background: url(../img/login.jpg) no-repeat center center fixed; 
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     background-size: 100%;
 }
 
+.background-welcome {
+    background: url(../img/Landing-Page-Background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+}
+
+.background-transaction {
+    background: url(../img/Transactions.JPG) no-repeat center center fixed; 
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+}
+
+.background-otp {
+    background-color : #F2F2F2;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+}
+
+.paypointsbutton{
+	left: 10%;
+	top :90%;
+	width :290px;
+}
 
 .header .col {
   background-color:dark;
@@ -172,57 +236,57 @@ height: 290px;
 }
 
 .col1 {
-left: 7%;
-top :20%;
+left: 3%;
+top :17%;
 position: absolute;
 text-align: center;
-width: 80px;
-height: 80px;
+width: 110px;
+height: 90px;
 }
 
 .col2 {
-left: 35%;
-top :20%;
+left: 31%;
+top :17%;
 position: absolute;
 text-align: center;
-width: 80px;
-height: 80px;
+width: 110px;
+height: 90px;
 }
 
 .col3 {
-left: 63%;
-top :20%;
+left: 59%;
+top :17%;
 position: absolute;
 text-align: center;
-width: 80px;
-height: 80px;
+width: 110px;
+height: 90px;
 }
 
 .col4 {
-left: 7%;
-top :55%;
+left: 3%;
+top :51%;
 position: absolute;
 text-align: center;
-width: 80px;
-height: 80px;
+width: 110px;
+height: 90px;
 }
 
 .col5 {
-left: 35%;
-top :55%;
+left: 31%;
+top :51%;
 position: absolute;
 text-align: center;
-width: 80px;
-height: 80px;
+width: 110px;
+height: 90px;
 }
 
 .col6 {
-left: 63%;
-top :55%;
+left: 59%;
+top :51%;
 position: absolute;
 text-align: center;
-width: 80px;
-height: 80px;
+width: 110px;
+height: 90px;
 }
 
 
@@ -232,4 +296,53 @@ height: 80px;
     min-height: 150px;
     max-height: 388px;
     overflow: auto;
+}
+
+table {
+    width:100%;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #0070BA;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#0058A2;
+}
+table#t01 th	{
+    background-color: #0058A2;
+    color: white;
+}
+
+table#t02 tr:nth-child(even) {
+    background-color: #333333;
+}
+table#t02 tr:nth-child(odd) {
+   background-color:#484340;
+}
+table#t02 th	{
+
+    background-color:#484340;
+    color: white;
+}
+
+table#t03 tr:nth-child(even) {
+    background-color: #333333;
+}
+table#t03 tr:nth-child(odd) {
+   background-color:#484340;
+}
+
+.txndiv {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;        
+    width:320px;
+    height:150px;
+    margin-left: -160px; /*half width*/
+    margin-top: -132px; /*half height*/
 }

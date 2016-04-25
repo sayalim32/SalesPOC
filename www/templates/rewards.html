@@ -1,0 +1,50 @@
+<ion-view view-title="Rewards" ng-controller="rewardsCtrl">
+  <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      
+      </ion-nav-buttons>
+
+  <ion-content >
+  <div>
+   <a class="item item-royal item-icon-right" href="#">
+      <input type="text" class="findteamtextbox" placeholder="Search For Rewards">
+    <button  class="button button-royal icon findteamsbutton">
+      <i class="ion-ios-search-strong"></i></button>
+      </a>
+   </div>
+  <div class="list">
+
+    <a class="item item-assertive item-thumbnail-left" href="#">
+      <img src="../img/item1.jpg">
+      <h2 class="stable">Redeem at Any Merchant</h2>
+      <h4 class="stable">Pay with points at any valid credit card</h4>
+       <h4 class="stable">swipe</h4>
+      <h4 class="stable">Exchange 7,200 points for $20 SGD</h4>
+       <button class="button button-royal jointeamButton" ng-click ="payPoints()">Pay with Points</button>
+    </a>
+ <a class="item item-assertive item-thumbnail-left" href="#">
+      <img src="../img/item2.jpg">
+      <h2 class="stable">Takashimaya Dept Store</h2>
+      <h4 class="stable">$20 redemption</h4>
+      <h4 class="stable">5,250 points</h4>
+       <button class="button button-royal jointeamButton" ng-click ="payPoints()">Pay with Points</button>
+    </a>
+    <a class="item item-assertive item-thumbnail-left" href="#">
+      <img src="../img/item3.jpg">
+      <h2 class="stable">ESQ Ladies Watch</h2>
+      <h4 class="stable">ESQ Luxe chronograpth Ladies Watch</h4>
+      <h4 class="stable">1,81,400 Points (Was 355,200 points)</h4>
+       <button class="button button-royal jointeamButton" ng-click ="payPoints()">Pay with Points</button>
+    </a>
+ <a class="item item-assertive item-thumbnail-left" href="#">
+      <img src="../img/item4.jpg">
+      <h2 class="stable">Tissot Men's Watch</h2>
+      <h4 class="stable">Tissot T-TOUCH || Men's Watch - Black Strap</h4>
+      <h4 class="stable">213,200 points (Was 347,900 points)</h4>
+       <button class="button button-royal jointeamButton" ng-click ="payPoints()">Pay with Points</button>
+    </a>
+</div>
+
+  </ion-content>
+</ion-view>

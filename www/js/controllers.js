@@ -110,6 +110,7 @@ $state.go('app.salesdash');
   
 })
 
+
 .controller("salesDashBoardCtrl", function($scope) {
  console.log('inside salesDashBoardCtrl');
     $scope.graph = {};
@@ -122,4 +123,22 @@ $state.go('app.salesdash');
   $scope.graph.labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   $scope.graph.series = ['Awake', 'Asleep'];
  
+})
+
+.controller("rewardsCtrl", function($scope,$state) {
+ console.log('inside payPointsCtrl');
+
+  $scope.payPoints =function (){
+  console.log('inside function pay points');
+$state.go('app.paywithpoints');
+}
+})
+
+.controller("txnCtrl", function($scope,$state) {
+ console.log('inside txnCtrl');
+
+  $scope.paywithPoints =function (){
+  console.log('inside function pay points');
+$state.go('app.paywithpoints');
+}
 });

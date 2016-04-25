@@ -1,4 +1,4 @@
-<ion-view ng-controller="welcomeCtrl">
+<ion-view view-title="Sales LeaderBoard" ng-controller="welcomeCtrl">
   <ion-header-bar>
     <h1 class="title">Login</h1>
     <div class="buttons">
@@ -6,7 +6,7 @@
     </div>
   </ion-header-bar>
   <ion-content class="background-welcome">
-  <div class="salesBoardBG"></div>
+ <!-- <div class="salesBoardBG"></div>
    <div class ="item item-dark salesBoard">
         <h3 class ="align-center stable">Current Sales LeaderBoard</h3>
         
@@ -20,8 +20,8 @@
           <div class="col">{{data1.friendName}}</div>
           <div class="col">{{data1.totalPoints}}</div>
     </div>
-        </div>
-
+        </div>-->
+        <!--
 <div class ="upcomingsalesBG" ></div>
 <div class="item item-dark upcomingsales">
 Upcoming Sales Events<br>
@@ -35,12 +35,54 @@ Upcoming Sales Events<br>
   Join Event Now!
 </button>
     </div>
-    
+    -->
+<div class="txndiv">
+  <div class="item item-dark">
+  Current Sales LeaderBoard</div>
+  <table id="t02">
+  <tr>
+    <th>Rank</th>
+    <th>Friend Name</th>    
+    <th>Total Points</th>
+  </tr>
+  <tr>
+    <td class="stable">1</td>
+     <td class="stable">Sophia Lee</td>
+      <td class="stable">52,200</td>  
+  </tr>
+  <tr>
+   <td class="stable">2</td>    
+    <td class="stable">Lee Lee Chin</td>
+     <td class="stable">30,420</td>
+  </tr>
+  <tr>
+   <td class="stable">3</td>
+   <td class="stable">S$5.00</td>
+   <td class="stable">25,300</td>    
+  </tr>
+</table>
+</div>
+<div class="item item-dark upcomingsales">
+<table id="t03">
+  <tr>
+    Upcoming Sales Events
+  </tr><br><br>
+  <tr>From Mar 2016 to Dec 2016, every <br>
+  10 successful referrals will give<br>
+   you 2X
+         MORE
+         REWARD POINTS!</tr>
+  </table>
+  <button class="button button-positive joinEvent" ng-click ="joinEvent()">
+  Join Event Now!
+</button>
+  </div>
+
 <div class="progressbarBG"></div>
 <div class=" item item-dark progressbar ">
-3,614 points to get 2 Golden village<br>
-passes..
-<progress max="100" value="40"> </progress>
+<h3 class="stable">3,614 points to get 2 Golden village
+passes..</h3>
+<progress class ="positive" max="100" value="40"> </progress>
 </div>
   </ion-content>
 </ion-view>

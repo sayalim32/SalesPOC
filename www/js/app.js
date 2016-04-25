@@ -111,6 +111,41 @@ angular.module('starter', ['ionic','chart.js','starter.controllers'])
         templateUrl: 'templates/salesdashboard.html'
       }
     }
+  })
+
+   .state('app.rewards', {
+    url: '/rewards',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/rewards.html'
+      }
+    }
+  })
+
+   .state('app.paywithpoints', {
+    url: '/paywithpoints',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/paywithpoints.html'
+      }
+    }
+  })
+      .state('app.sendotp', {
+    url: '/sendotp',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/sendotp.html'
+      }
+    }
+  })
+
+ .state('app.transactions', {
+    url: '/transactions',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/transactions.html'
+      }
+    }
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/welcome');
