@@ -1,8 +1,8 @@
-<ion-modal-view ng-controller="findTeamCtrl">
- <ion-header-bar>
-    <h1 class="title">Enter OTP</h1>
+<ion-modal-view>
+ <ion-header-bar class="bar-positive">
+    <h2 class="title">Enter OTP</h2>
     <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+      <button class="button button-clear icon" ng-click="closesendotp()"><i class= "ion-close-circled"></i></button>
     </div>
   </ion-header-bar>
  
@@ -19,22 +19,21 @@
 </div>
 <div class="background-otp">
 <br>
-<input type="text" class="otptextbox" placeholder="Enter One-Time PIN here">
+<input type="text" class="otptextbox" placeholder="Enter One-Time PIN Here">
 <br>
 <a> Click here for One-Time PIN via SMS </a>
-
+<br>
+<br>
+<br>
 <h6 class="calm">If you experience difficulties in receiving you one_Time PIN(OTP),please contact our 24-Hour CitiPhone at (65) 6225-5225 for future assistance.</h6>
-<br>
-<br>
-<br>
 <h6 class="calm">In our continuous effort to make Citi Mobile app a secured banking environment, you are required to enter a One-Time PIN(OTP). A Single random PIN that will be sent to you via SMS 
 or generated via your Online Security Device(OSD) as a second level of security.</h6>
 
 <!--<button class="button button-large  button-positive block">Continue</button>
 <button class="button button-large button-positive block">Cancel</button>-->
 <div class="calm">
-  <button class="button button-positive  button-full pull-right">Continue</button>
-  <button class="button button-clear button-full pull-left">Cancel</button>
+  <button class="button button-positive  button-full pull-right" ng-click="openTxn()">Continue</button>
+  <button class="button button-clear button-full pull-left" ng-click="closesendotp()">Cancel</button>
 </div>
 </div>
 

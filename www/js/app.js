@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','chart.js','starter.controllers','starter.services'])
+angular.module('starter', ['ionic','chart.js','ngCordova','starter.controllers','starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -147,6 +147,24 @@ angular.module('starter', ['ionic','chart.js','starter.controllers','starter.ser
     views: {
       'menuContent': {
         templateUrl: 'templates/transactions.html'
+      }
+    }
+  })
+
+ .state('app.recfriend', {
+    url: '/recfriend',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/recommendfriend.html'
+      }
+    }
+  })
+
+ .state('app.salestracker', {
+    url: '/salestracker',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/salestracker.html'
       }
     }
   });

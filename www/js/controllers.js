@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['starter.services','chart.js','nvd3'])
+angular.module('starter.controllers', ['ngCordova','starter.services','chart.js','nvd3'])
 
 
 .factory('UserService', function ($rootScope, $q) {
@@ -131,6 +131,73 @@ $state.go('app.salesdash');
   
 })
 
+.controller('rewardsCtrl', function ($scope, $state) {
+  console.log('inside rewardsCtrl');
+  $scope.payPoints =function (){
+  console.log('inside function join team');
+$state.go('app.paywithpoints');
+}
+        
+    })
+
+
+.controller('TxnCtrl', function ($scope, $state,$ionicPopup, $ionicModal) {
+   console.log('inside TxnCtrl');
+
+        $ionicModal.fromTemplateUrl('templates/sendotp.html', function(modal) {
+
+            $scope.oModal1 = modal;
+        }, {
+          id:1,
+            scope: $scope,
+            animation: 'slide-in-up'
+        });
+
+         $ionicModal.fromTemplateUrl('templates/transactions.html', function(modal) {
+
+            $scope.oModal2 = modal;
+        }, {
+          id:2,
+            scope: $scope,
+            animation: 'slide-in-up'
+        });
+
+
+        // Open our new task modal
+        $scope.opensendotp = function() {
+            $scope.oModal1.show();
+        };
+
+        $scope.closesendotp = function() {
+            $scope.oModal1.hide();
+        };
+
+      $scope.openTxn = function() {
+            $scope.oModal1.hide();
+            $scope.oModal2.show();
+        };
+
+        $scope.closeTxn = function() {
+            $scope.oModal2.hide();
+            $state.go('app.rewards');
+        };
+      })
+
+.controller("recFriendsCtrl", function($scope, $cordovaSocialSharing) {
+ 
+    $scope.shareAnywhere = function() {
+        $cordovaSocialSharing.share("This is your message", "This is your subject",null, "https://www.thepolyglotdeveloper.com");
+    }
+ 
+   /* $scope.shareViaTwitter = function(message, image, link) {
+        $cordovaSocialSharing.canShareVia("twitter", message, image, link).then(function(result) {
+            $cordovaSocialSharing.shareViaTwitter(message, image, link);
+        }, function(error) {
+            alert("Cannot share on Twitter");
+        });
+    }*/
+ 
+})
 
 .controller("salesDashBoardCtrl", function($scope) {
  console.log('inside salesDashBoardCtrl');
@@ -332,14 +399,5 @@ $state.go('app.salesdash');
         });
 
         // Open our new task modal
-        
-    })
-
-.controller('rewardsCtrl', function ($scope, $state) {
-  console.log('inside rewardsCtrl');
-  $scope.payPoints =function (){
-  console.log('inside function join team');
-$state.go('app.paywithpoints');
-}
         
     });

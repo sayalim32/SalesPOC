@@ -1,4 +1,4 @@
-<ion-view view-title="Pay with Points" ng-controller="findTeamCtrl">
+<ion-view view-title="Pay with Points">
   <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
@@ -7,7 +7,7 @@
 
   <ion-content class="background-transaction" >
 
-    <button class="button button-royal paypointsbutton">
+    <button class="button button-royal paypointsbutton" ng-controller="TxnCtrl" ng-click="opensendotp()">
       View Last 5 Transactions</button>
 
 

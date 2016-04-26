@@ -195,8 +195,8 @@ position: absolute;
 
 .otptextbox {
 left: 20%;
-width:270px;
-height:5px;
+width:340px;
+height:10px;
 }
 
 
@@ -230,6 +230,21 @@ height:5px;
 
 .background-otp {
     background-color : #F2F2F2;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+    padding:10px;
+}
+
+.background-recfriend {
+   background: url(../img/Recommend-a-Friend-Background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-size: 100%;
+}
+
+.background-salestracker {
+   background: url(../img/salesTrackerBG.JPG) no-repeat top center fixed; 
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     background-size: 100%;
