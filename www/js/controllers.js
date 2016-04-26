@@ -1,4 +1,25 @@
-angular.module('starter.controllers', ['chart.js'])
+angular.module('starter.controllers', ['starter.services','chart.js','nvd3'])
+
+
+.factory('UserService', function ($rootScope, $q) {
+        return {
+            isAuthorized: function () {
+              console.log('inside isauth function');
+                if (window.sessionStorage.getItem('user') === null ) {
+                  console.log('inside false');
+                    $rootScope.$broadcast('user.notAuthorized'); 
+                    return false;
+                }
+                return true;
+            },
+
+            authorize: function (email, password) {
+                deffered = $q.defer();
+                // ...
+                return deffered.promise;
+            }
+        };
+    })
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -113,32 +134,203 @@ $state.go('app.salesdash');
 
 .controller("salesDashBoardCtrl", function($scope) {
  console.log('inside salesDashBoardCtrl');
-    $scope.graph = {};
-  $scope.graph.data = [
-    //Awake
-    [16, 15, 20, 12, 16, 12, 8],
-    //Asleep
-    [8, 9, 4, 12, 8, 12, 14]
-  ];
-  $scope.graph.labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-  $scope.graph.series = ['Awake', 'Asleep'];
- 
+  $scope.vm = {};
+
+  $scope.vm.options = {  
+      chart: {
+        type: 'multiBarChart',
+        height: 300,
+        x: function(d){return d.label;},
+        y: function(d){return d.value;},
+        showControls: false,
+        showValues: true,
+        duration: 500,
+        margin: {left:100,top:50,bottom:50,right:100},
+        xAxis: {
+          showMaxMin: false
+        },
+        yAxis: {
+          tickValues: 0,
+          showMaxMin: true,
+          tickFormat: function(d) {
+            return d3.format(',.')(d);
+          }
+        }
+      }
+    };
+
+  $scope.vm.stars = {  
+    "Mon" : [7210,0],
+    "Tue" : [6310,0],
+    "Wed" : [3610,0],
+    "Thu" : [5500,0],
+    "Fri" : [8110,0],
+    "Sat" : [1009,0],
+    "Sun" : [2620,0]
+  };
+
+    $scope.vm.data = [  
+      {
+        "key": "Points",
+        "color": "#1f77b4",
+        "values": [
+           { 
+             "label" : "Mon" , 
+             "value" : $scope.vm.stars.Mon[0] 
+           },
+           { 
+             "label": "Tue" , 
+             "value" : $scope.vm.stars.Tue[0] 
+           },
+           { 
+             "label" : "Wed" , 
+             "value" : $scope.vm.stars.Wed[0] 
+           },
+           { 
+             "label" : "Thu" , 
+             "value" : $scope.vm.stars.Thu[0] 
+           },
+           { 
+             "label" : "Fri" , 
+             "value" : $scope.vm.stars.Fri[0] 
+           },
+           { 
+             "label" : "Sat" , 
+             "value" : $scope.vm.stars.Sat[0] 
+           },
+           { 
+             "label" : "Sun" , 
+             "value" : $scope.vm.stars.Sun[0] 
+           }
+        ]
+      },
+      {
+        "key": "",
+        "color": "#ffffff",
+        "values": [
+           { 
+             "label" : "Mon" , 
+             "value" : $scope.vm.stars.Mon[1] 
+           },
+           { 
+             "label": "Tue" , 
+             "value" : $scope.vm.stars.Tue[1] 
+           },
+           { 
+             "label" : "Wed" , 
+             "value" : $scope.vm.stars.Wed[1] 
+           },
+           { 
+             "label" : "Thu" , 
+             "value" : $scope.vm.stars.Thu[1] 
+           },
+           { 
+             "label" : "Fri" , 
+             "value" : $scope.vm.stars.Fri[1] 
+           },
+           { 
+             "label" : "Sat" , 
+             "value" : $scope.vm.stars.Sat[1] 
+           },
+           { 
+             "label" : "Sun" , 
+             "value" : $scope.vm.stars.Sun[1] 
+           }
+        ]
+      }
+    ];
 })
 
-.controller("rewardsCtrl", function($scope,$state) {
- console.log('inside payPointsCtrl');
 
-  $scope.payPoints =function (){
-  console.log('inside function pay points');
-$state.go('app.paywithpoints');
-}
-})
+.controller('HomeCtrl', function ($scope, $state,UserService,$ionicPopup, $ionicModal,LoginService) {
+   console.log('inside loginctrl');
+  $scope.data = {};
+      var initialized = false;
 
-.controller("txnCtrl", function($scope,$state) {
- console.log('inside txnCtrl');
+        $ionicModal.fromTemplateUrl('templates/home.html', function(modal) {
 
-  $scope.paywithPoints =function (){
-  console.log('inside function pay points');
-$state.go('app.paywithpoints');
-}
-});
+            $scope.oModal1 = modal;
+        }, {
+          id:1,
+            scope: $scope,
+            animation: 'slide-in-up'
+        });
+
+         $ionicModal.fromTemplateUrl('templates/login.html', function(modal) {
+
+            $scope.oModal2 = modal;
+        }, {
+          id:2,
+            scope: $scope,
+            animation: 'slide-in-up'
+        });
+
+
+        // Open our new task modal
+        $scope.openHome = function() {
+            $scope.oModal1.show();
+        };
+
+        $scope.closeHome = function() {
+            $scope.oModal1.hide();
+        };
+
+        $scope.doLogOut = function() {
+          window.sessionStorage.setItem("user", null);
+          var isauth= window.sessionStorage.getItem("user");
+              console.log('logout: ', isauth);
+            $scope.oModal1.show();
+        };
+
+      $scope.openLogin = function() {
+            $scope.oModal2.show();
+        };
+
+        $scope.closeLogin = function() {
+            $scope.oModal2.hide();
+        };
+
+    $scope.doLogin = function() {
+      console.log('inside doLogin function');
+        LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
+            $scope.oModal1.hide();
+            $scope.oModal2.hide();
+            $state.go('app.welcome');
+        }).error(function(data) {
+            var alertPopup = $ionicPopup.alert({
+                title: 'Login failed!',
+                template: 'Please check your credentials!'
+            });
+        });
+    }
+        $scope.$on('user.notAuthorized', function(e) {
+            if (!initialized) {
+                initialized = true;
+                //$scope.openModal();
+                setTimeout( function() {$scope.openHome()}, 500);
+               window.sessionStorage.setItem("user", "AUTH");
+               var isauth= window.sessionStorage.getItem("user");
+              console.log('isauth: ', isauth);
+               
+
+            }
+        });
+
+        UserService.isAuthorized();
+      })
+
+.controller('LoginCtrl', function ($scope, $state,UserService,$ionicPopup, $ionicModal,LoginService) {
+  console.log('inside LoginCtrl');
+  $scope.data = {};
+        var initialized = false;
+
+        $ionicModal.fromTemplateUrl('templates/login.html', function(modal) {
+            $scope.modal = modal;
+        }, {
+            scope: $scope,
+            animation: 'slide-in-up'
+        });
+
+        // Open our new task modal
+        
+    });

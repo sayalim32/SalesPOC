@@ -9753,6 +9753,18 @@ p.test {
   margin-top: -10px;
   /*half height*/ }
 
+.loginpageDiv {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  width: 320px;
+  height: 150px;
+  margin-left: -160px;
+  /*half width*/
+  margin-top: -132px;
+  /*half height*/ }
+
 .applycardDiv {
   position: absolute;
   left: 50%;
@@ -9764,6 +9776,13 @@ p.test {
   /*half width*/
   margin-top: -100px;
   /*half height*/ }
+
+.welcomeimg {
+  display: block;
+  margin: 0 auto; }
+
+.welcometxt {
+  text-align: center; }
 
 .joinEvent {
   left: 10%;
@@ -9793,13 +9812,12 @@ p.test {
   top: 25%;
   width: 500px;
   height: 200px;
-  background: url(../img/Sales-Event-Background.jpg) no-repeat center center fixed;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   background-size: 100%; }
 
 .jointeamBG {
-  background: url(../img/SalesBG.png) no-repeat top center fixed;
+  background: url(../img/Sales-Event-Background.jpg) no-repeat top center fixed;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   background-size: 100%; }
@@ -9807,6 +9825,9 @@ p.test {
 .jointeamButton {
   width: 240px;
   height: 5px; }
+
+.teameventtxtbox {
+  width: 130px; }
 
 .salesBoard {
   position: absolute;
@@ -9857,6 +9878,12 @@ p.test {
   left: 20%;
   width: 270px;
   height: 5px; }
+
+.background-navbar {
+  background: url(../img/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%; }
 
 .background-home {
   background: url(../img/login.jpg) no-repeat center center fixed;
@@ -10004,3 +10031,18 @@ table#t03 tr:nth-child(odd) {
   /*half width*/
   margin-top: -132px;
   /*half height*/ }
+
+.c8grey-bg {
+  background: #c8c8c8;
+  height: 80px;
+  width: 120px;
+  padding: 5px;
+  align-self: center; }
+
+.colAlign1 {
+  position: relative;
+  left: 10%; }
+
+.colAlign2 {
+  position: relative;
+  left: 5%; }

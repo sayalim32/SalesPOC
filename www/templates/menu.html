@@ -16,23 +16,26 @@
     <ion-header-bar class="bar-positive">
       <h1 class="title">Citi Social Sales</h1>
     </ion-header-bar>
-    <ion-content>
+    <ion-content class="background-navbar">
       <ion-list>
-        <ion-item menu-close href="#/app/welcome">
+        <ion-item class="item-positive" menu-close href="#/app/welcome">
           Home
         </ion-item>
-        <ion-item menu-close href="#/app/teamsales">
+        <ion-item class="item-positive" menu-close href="#/app/teamsales">
           Team Sales Event
         </ion-item>
-        <ion-item menu-close href="#/app/findteam">
+        <ion-item class="item-positive" menu-close href="#/app/findteam">
           Find a Team
         </ion-item>
-        <ion-item menu-close href="#/app/salesdash">
+        <ion-item class="item-positive" menu-close href="#/app/salesdash">
           Sales DashBoard
         </ion-item>
-        <ion-item menu-close href="#/app/rewards">
+        <ion-item class="item-positive" menu-close href="#/app/rewards">
           Rewards
         </ion-item>
+        <div class="item item-positive" menu-close ng-controller ='HomeCtrl' ng-click="doLogOut()">
+      LogOut
+        </div>
       </ion-list>
     </ion-content>
   </ion-side-menu>

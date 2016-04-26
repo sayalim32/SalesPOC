@@ -1,25 +1,35 @@
 <ion-view view-title="Sales DashBoard" ng-controller='salesDashBoardCtrl'>
 
- <ion-nav-buttons side="left">
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
-        </button>
-        
-      </ion-nav-buttons>
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
 
-  <ion-content >
-   <!-- <div class="card">
-        <div class="item item-divider">
-            A line chart
+  <ion-tabs class="tabs-info tabs-icon-top">
+    <ion-tab title="Week" icon-on="ion-stats-bars is-active" icon-off="ion-stats-bars">
+      <div class="bar bar-header bar-positive">
+        <h1 class="title"> D3 JS</h1>
+      </div>
+      <ion-content>
+        <div class="row">
+          <div class="col"> <h2 style="color:#069; font-size: 1.8em; font-weight: bold; text-align:center">$170.00</h2> <p style="color:#000000; text-align:center">Rebet Earned<p> </div>
+          <div class="col"> <h2 style="color:#069; font-size: 1.8em; font-weight: bold; text-align:center">34,020</h2> <p style="color:#000000; text-align:center">Points Earned<p></div>
         </div>
-        <div class="item item-text-wrap">
-            <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="true" chart-series="series" chart-options="{showTooltips: false}"></canvas>
+        <div>
+          <nvd3 options="vm.options" data="vm.data"></nvd3>
         </div>
-    </div>-->
-    <div class="card">
-        <div class="item item-divider">
-            A bar chart
+        <div class="row">
+          <div class="col colAlign1"><div class="item c8grey-bg"> <h2 style="font-size: 1.5em; font-weight: bold; text-align:center" >235</h2> <p style="color:#000000; text-align:center">Message Sent<p> </div></div>
+          <div class="col colAlign2"><div class="item c8grey-bg"> <h2 style="font-size: 1.5em; font-weight: bold; text-align:center" >127</h2> <p style="color:#000000; text-align:center">App Downloads<p> </div></div>
         </div>
-         <canvas id="bar" class="chart chart-bar" chart-data="graph.data" chart-labels="graph.labels" chart-series='graph.series' height="50"></canvas>
-    </div>
-</ion-content>
+        <div> </div>
+        <div class="row">
+            <div class="col colAlign1"><div class="item c8grey-bg"> <h2 style="font-size: 1.5em; font-weight: bold; text-align:center">7</h2> <p style="color:#000000; text-align:center">Successful Sales<p> </div></div>
+            <div class="col colAlign2"><div class="item c8grey-bg"> <h2 style="font-size: 1.5em; font-weight: bold; text-align:center">101</h2> <p style="color:#000000; text-align:center">Inactive Friends<p> </div></div>
+        </div>
+      </ion-content>  
+    </ion-tab>
+    <ion-tab title="Month" icon-on="ion-stats-bars is-active" icon-off="ion-stats-bars"></ion-tab>
+    <ion-tab title="All Time" icon-on="ion-stats-bars is-active" icon-off="ion-stats-bars"></ion-tab>
+  </ion-tabs>
 </ion-view>
