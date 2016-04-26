@@ -333,4 +333,13 @@ $state.go('app.salesdash');
 
         // Open our new task modal
         
+    })
+
+.controller('rewardsCtrl', function ($scope, $state) {
+  console.log('inside rewardsCtrl');
+  $scope.payPoints =function (){
+  console.log('inside function join team');
+$state.go('app.paywithpoints');
+}
+        
     });
