@@ -18,8 +18,7 @@
 <br>
 </div>
 <div class="background-otp">
-<br>
-<input type="text" class="otptextbox" placeholder="Enter One-Time PIN Here">
+<input type="number" class="otptextbox" style="-webkit-text-security:disc" ng-model="data.pinnumber" placeholder="Enter One-Time PIN Here">
 <br>
 <a> Click here for One-Time PIN via SMS </a>
 <br>
@@ -32,8 +31,9 @@ or generated via your Online Security Device(OSD) as a second level of security.
 <!--<button class="button button-large  button-positive block">Continue</button>
 <button class="button button-large button-positive block">Cancel</button>-->
 <div class="calm">
-  <button class="button button-positive  button-full pull-right" ng-click="openTxn()">Continue</button>
-  <button class="button button-clear button-full pull-left" ng-click="closesendotp()">Cancel</button>
+  <button class="button button-clear button-positive  otpbutton2" ng-click="closesendotp()">Cancel</button>
+  <button class="button button-positive otpbutton1" ng-disabled="data.pinnumber.length < 4 || data.pinnumber == null" ng-click="openTxn()">Continue</button>
+  
 </div>
 </div>
 

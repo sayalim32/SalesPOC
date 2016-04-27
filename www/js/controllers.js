@@ -143,7 +143,7 @@ $state.go('app.paywithpoints');
 
 .controller('TxnCtrl', function ($scope, $state,$ionicPopup, $ionicModal) {
    console.log('inside TxnCtrl');
-
+    $scope.data = { "pinnumber":null};
         $ionicModal.fromTemplateUrl('templates/sendotp.html', function(modal) {
 
             $scope.oModal1 = modal;
@@ -169,6 +169,7 @@ $state.go('app.paywithpoints');
         };
 
         $scope.closesendotp = function() {
+          $scope.data.pinnumber = null;
             $scope.oModal1.hide();
         };
 
@@ -178,6 +179,7 @@ $state.go('app.paywithpoints');
         };
 
         $scope.closeTxn = function() {
+          $scope.data.pinnumber = null;
             $scope.oModal2.hide();
             $state.go('app.rewards');
         };
@@ -186,7 +188,7 @@ $state.go('app.paywithpoints');
 .controller("recFriendsCtrl", function($scope, $cordovaSocialSharing) {
  
     $scope.shareAnywhere = function() {
-        $cordovaSocialSharing.share("Use my Citi Promo Code, WWCITI77, and get up to $120 Cash Back on 2 New Credit Cards!", "$120 Cash Back Promotion",null, "https://www.citbank.com.sg");
+        $cordovaSocialSharing.share("Use my Citi Promo Code, WWCITI77, and get up to $120 Cash Back on 2 New Credit Cards!", "$120 Cash Back Promotion",null, "https://www.citibank.com.sg");
     }
  
 })

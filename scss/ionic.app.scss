@@ -23,7 +23,6 @@ $positive:                        #0070BA !default;
 $dark:                            #333333 !default;
 $assertive:                       #0058A2 !default;
 $calm:                            #4D4D4D !default;
-
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
@@ -116,13 +115,28 @@ width:200px;
  min-height: 10px !important;
 }
 
+
 .jointeamdiv{
-top: 25%;
- width:500px;
-    height:100px;
-   	 -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    background-size: 100%;
+background-color:#004A87;
+position:absolute;
+top: 27%;
+width:359px;
+height:129px;
+}
+
+.salestrackerdiv{
+background-color:#004A87;
+position:absolute;
+top: 27%;
+width:359px;
+height:125px;
+}
+
+.salestrackertable{
+    
+position:absolute;
+top: 49%;
+height:330px;
 }
 
 .jointeamBG{
@@ -140,7 +154,7 @@ top: 25%;
 }
 
 .teameventtxtbox{
-	width:130px;
+	width:104px;
 }
 .salesBoard{
 position: absolute;
@@ -162,7 +176,7 @@ position: absolute;
 .upcomingsales{
 position: absolute;
 	left: 6%;
-    top: 60%;
+    top: 65%;
  	width:316px;
     height:180px;
 }
@@ -179,7 +193,7 @@ position: absolute;
 .progressbar{
 position: absolute;
 	left: 6%;
-    top: 92%;
+    top: 98%;
  	width:316px;
     height:80px;
 }
@@ -187,7 +201,7 @@ position: absolute;
 .progressbarBG{
 position: absolute;
 	left: 10%;
-    top: 95%;
+    top: 98%;
  	width:300px;
     height:120px;
 	opacity: 0.4; 
@@ -199,6 +213,17 @@ width:340px;
 height:10px;
 }
 
+.otpbutton1{
+
+    width:166px;
+    height:5px;
+}
+
+.otpbutton2{
+
+    width:166px;
+    height:5px;
+}
 
 .background-navbar {
     background: url(../img/background.jpg) no-repeat center center fixed; 
@@ -275,8 +300,10 @@ height:10px;
 }
 
 .badgesdiv{
+position: absolute;
+top:49%;
 	width: 400px;
-height: 290px;
+height: 293px;
 }
 
 .col1 {
@@ -380,10 +407,27 @@ table#t03 tr:nth-child(odd) {
    background-color:#484340;
 }
 
+table#t04 tr:nth-child(even) {
+    background-color: #004A87;
+}
+table#t04 tr:nth-child(odd) {
+   background-color: #004A87;
+}
+
+table {
+    width:100%;
+}
+
+th, td {
+    
+    text-align: left;
+}
+
+
 .txndiv {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 55%;
     text-align: center;        
     width:320px;
     height:150px;
