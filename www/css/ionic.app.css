@@ -9811,7 +9811,7 @@ p.test {
 .jointeamdiv {
   top: 25%;
   width: 500px;
-  height: 200px;
+  height: 100px;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   background-size: 100%; }
@@ -9886,7 +9886,7 @@ p.test {
   background-size: 100%; }
 
 .background-home {
-  background: url(../img/login.jpg) no-repeat center center fixed;
+  background: url(../img/login.JPG) no-repeat center center fixed;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   background-size: 100%; }

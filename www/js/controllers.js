@@ -186,17 +186,16 @@ $state.go('app.paywithpoints');
 .controller("recFriendsCtrl", function($scope, $cordovaSocialSharing) {
  
     $scope.shareAnywhere = function() {
-        $cordovaSocialSharing.share("This is your message", "This is your subject",null, "https://www.thepolyglotdeveloper.com");
+        $cordovaSocialSharing.share("Use my Citi Promo Code, WWCITI77, and get up to $120 Cash Back on 2 New Credit Cards!", "$120 Cash Back Promotion",null, "https://www.citbank.com.sg");
     }
  
-   /* $scope.shareViaTwitter = function(message, image, link) {
-        $cordovaSocialSharing.canShareVia("twitter", message, image, link).then(function(result) {
-            $cordovaSocialSharing.shareViaTwitter(message, image, link);
-        }, function(error) {
-            alert("Cannot share on Twitter");
-        });
-    }*/
+})
+
+.controller("salesTrackCtrl", function($scope, $cordovaSocialSharing) {
  
+    $scope.shareAnywhere = function() {
+        $cordovaSocialSharing.share("Hey Chin Yan,just wanted to remind you to continue the Citi card signup process.Have a wonderful day ahead!", null,null, null);
+    } 
 })
 
 .controller("salesDashBoardCtrl", function($scope) {
