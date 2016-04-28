@@ -144,6 +144,9 @@ $state.go('app.paywithpoints');
 .controller('TxnCtrl', function ($scope, $state,$ionicPopup, $ionicModal) {
    console.log('inside TxnCtrl');
     $scope.data = { "pinnumber":null};
+    $scope.payTxnpoints =function(){
+      alert ('Transaction is sucesssful');
+    }
         $ionicModal.fromTemplateUrl('templates/sendotp.html', function(modal) {
 
             $scope.oModal1 = modal;
@@ -182,6 +185,34 @@ $state.go('app.paywithpoints');
           $scope.data.pinnumber = null;
             $scope.oModal2.hide();
             $state.go('app.rewards');
+        };
+      })
+
+.controller('CardCtrl', function ($scope, $state,$ionicPopup, $ionicModal) {
+   console.log('inside CardCtrl');
+    
+    $scope.submitform =function(){
+      alert ('Details are submitted successfully.');
+      $scope.oModal.hide();
+
+    }
+        $ionicModal.fromTemplateUrl('templates/signup.html', function(modal) {
+
+            $scope.Modal = modal;
+        }, {
+          id:1,
+            scope: $scope,
+            animation: 'slide-in-up'
+        });
+
+
+        // Open our new task modal
+        $scope.opensignup = function() {
+            $scope.oModal.show();
+        };
+
+        $scope.closesignup = function() {
+            $scope.oModal.hide();
         };
       })
 
@@ -333,7 +364,22 @@ $state.go('app.paywithpoints');
             animation: 'slide-in-up'
         });
 
+         $ionicModal.fromTemplateUrl('templates/signup.html', function(modal) {
 
+            $scope.oModal3 = modal;
+        }, {
+          id:3,
+            scope: $scope,
+            animation: 'slide-in-up'
+        });
+
+       $scope.opensignup = function() {
+            $scope.oModal3.show();
+        };
+
+        $scope.closesignup = function() {
+            $scope.oModal3.hide();
+        };
         // Open our new task modal
         $scope.openHome = function() {
             $scope.oModal1.show();

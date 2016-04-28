@@ -167,7 +167,16 @@ angular.module('starter', ['ionic','chart.js','ngCordova','starter.controllers',
         templateUrl: 'templates/salestracker.html'
       }
     }
+  })
+
+ .state('app.signup', {
+    url: '/signup',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/signup.html'
+      }
+    }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/welcome');
+  $urlRouterProvider.otherwise('/app/signup');
 });

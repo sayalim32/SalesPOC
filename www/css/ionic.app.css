@@ -10029,10 +10029,14 @@ th, td {
   text-align: center; }
 
 table#t01 tr:nth-child(even) {
-  background-color: #0070BA; }
+  background-color: #0070BA;
+  height: 40px;
+  text-align: center; }
 
 table#t01 tr:nth-child(odd) {
-  background-color: #0058A2; }
+  background-color: #0058A2;
+  height: 40px;
+  text-align: center; }
 
 table#t01 th {
   background-color: #0058A2;
@@ -10077,6 +10081,35 @@ th, td {
   /*half width*/
   margin-top: -132px;
   /*half height*/ }
+
+.forminputtitle {
+  width: 100px; }
+
+.forminput {
+  width: 310px; }
+
+.forminputDOB {
+  position: absolute;
+  left: 40%;
+  width: 188px;
+  height: 50px; }
+
+.forminputDiv {
+  height: 70px; }
+
+.forminputname {
+  position: absolute;
+  left: 50%;
+  top: 22%;
+  width: 150px;
+  height: 50px; }
+
+.item-select {
+  width: 45%;
+  /* Or whatever you'd like the width to be */ }
+
+.item-select select {
+  left: 0; }
 
 .c8grey-bg {
   background: #c8c8c8;
